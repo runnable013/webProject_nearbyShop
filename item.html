@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>상품등록</title>
+    <script type="text/javascript" src="styles/item.js"></script>
+  </head>
+  <!-- 임시 CSS -->
+  <style>
+    .item{
+      float: left;
+      width: 30%;
+    }
+    .item > .input, .output{
+      width: 50%;
+    }
+  </style>
+  <body>
+    <article>
+      <!-- 등록 -->
+      <div class="item" style="width:20px">&nbsp</div>
+      <div class="item"> 제품명: <input type="text" id="name" class="input" onkeydown="enterKey()"> </div>
+      <div class="item"> 카테고리:
+        <select id="kategorie1" class="input">
+          <option>카테고리 없음</option>
+        </select>
+      </div>
+      <div class="item"> 제품분류: <input type="text" id="kategorie2" class="input" onkeydown="enterKey()"> </div>
+      <div> <button onclick="input()">등록</button> </div>
+
+      <!-- <hr/>
+      <form name="form">
+        <button type="button" name="test_btn1" onclick="itemChange()">업데이트</button>
+        <select id="data">
+          <option>제품을 등록해주세요</option>
+        </select>
+      </form> -->
+
+      <!-- 등록된 제품 -->
+      <hr/>
+      <div id="test2">
+      </div>
+    </article>
+  </body>
+</html>
