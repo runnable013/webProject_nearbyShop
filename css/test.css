@@ -1,0 +1,9 @@
+
+/* 임시 css */
+.item{
+    float: left;
+    width: 30%;
+}
+.item > .input, .output{
+    width: 50%;
+}

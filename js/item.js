@@ -98,4 +98,3 @@ function removeItem(remKey) {
   delItem.remove();
   point--;
 }
-
