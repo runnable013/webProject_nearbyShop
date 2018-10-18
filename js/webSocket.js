@@ -1,6 +1,6 @@
 
-var wsUri = "ws://echo.websocket.org/"
-var output = 
+var wsUri = "ws://127.0.0.1:8080/";
+var output;
 
 function init(){
     output = document.getElementById("output");
@@ -17,7 +17,7 @@ function testWebSocket() {
 
 function onOpen(evt) {
     writeToscreen("연결완료");
-    doSend("테스트 메세지");
+    doSend("!!!!!!!!!!!!!!");
 }
 
 function onClose(evt) {
@@ -42,7 +42,8 @@ function writeToscreen(message){
     var pre = document.createElement("P");
     pre.style.wordWrap = "break-word";
     pre.innerHTML = message;
-    output.appendChind(pre);
+    output.appendChild(pre);
 }
 
 window.addEventListener("load", init, false);
+

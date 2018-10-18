@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>회사등록</title>
-    <script type="text/javascript" src="js/compony.js"></script>
+    <script type="text/javascript" src="js/company.js"></script>
 </head>
 <body>
     <article>
-    <div class="item"> 가게명: <input type="text" id="name" class="input"> </div>
+    <div class="item"> 가게명: <input type="text" id="item0" class="input"> </div>
     <div class="item"> 가게분류:
-    <select id="kategorie1" class="input">
+    <select id="item1" class="input">
         <option>카테고리 없음</option>
     </select>
     </div>
-    <div class="item"> 주소: <input type="text" id="kategorie2" class="input" style="width: 60%" readonly> <button onclick="window.open('find_address.html', '주소찾기','width=600, height=400')">주소찾기</button> </div>
-    <div class="item"> 상세주소: <input type="text" id="kategorie2" class="input" style="width: 60%"> </div>
-    <div> <button onclick="find()">저장</button> </div>
+    <div class="item"> 주소: <input type="text" id="item2" class="input" style="width: 60%" readonly> <button onclick="openFindAddress()">주소찾기</button> </div>
+    <div class="item"> 상세주소: <input type="text" id="item3" class="input" style="width: 60%"> </div>
+    <div> <button onclick="input()">저장</button> </div>
     <div></div>
     </article>
 </body>
