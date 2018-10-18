@@ -31,9 +31,9 @@ function input() {
   var addressNum = 0;
   var searchAddress = new Array();
   function find(){
-    searchAddress[addressNum] = '<div>검색된 주소</div>';
+    alert("123");
+    searchAddress[addressNum++] = '<div>검색된 주소</div>';
     test3.innerHTML = searchAddress.join("");
-    addressNum++;
   }
 
 //저장된 카테고리 출력
