@@ -1,30 +1,24 @@
 
-var key_list,
-  name_list,
-  item1_list,
-  item2_list;
+var itemList = new Array(10),
 
 var kategorie = new Array("식료품점", "전자제품점", "식당", "종합");
 
 //입력된 정보를 저장
-function input() {
-    if(point < 10){
-      name_list[point] = document.getElementById("name").value;
-      if (name_list[point] != "") {
-        key_list[point] = superKey;
-        item1_list[point] = document.getElementById("kategorie1").value;
-        item2_list[point] = document.getElementById("kategorie2").value;
-  
-        document.getElementById("name").value = "";
-        document.getElementById("kategorie2").value = "";
-  
-        output();
-        point++;
-        superKey++
+function input() 
+  {
+    var i = 1;
+      do {
+        itemList = document.getElementById("item" + num).value;
+      } while(itemList[i] != "");
+      for(var i = 0; i<data_list.length; i++){
+        if (data_list[i] != "") {
+          key = superKey;
+          item1 = document.getElementById("kategorie1").value;
+    
+          output();
+          point++;
+          superKey++
       }
-    }
-    else{
-      alert("페이지기능 추가예정");
     }
   }
 
