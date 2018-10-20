@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상품검색</title>
+    <script type="text/javascript" src="js/search.js"></script>
+</head>
+<body>
+    <!--  찾는 상품을 검색 -->
+    <div>
+        <form name="form" id="form" method="post" style="float: left">
+            <input type="text" id="search-input" onkeydown="enterKey()">
+        </form>
+        <button onclick="search()">검색</button>
+    </div>
+    <hr/>
+
+    <!--검색된 상품들을 출력하는 위치-->
+    <div id="output"></div>
+</body>
+</html>
