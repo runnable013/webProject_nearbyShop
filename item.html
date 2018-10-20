@@ -8,16 +8,22 @@
   </head>
   <body>
     <article>
-      <!-- 등록 -->
+
+      <!-- 제품 정보를 등록하고, 등록된 제품 정보를 출력 -->
+    <div>
       <div class="item" style="width:20px">&nbsp</div>
-      <div class="item"> 제품명: <input type="text" id="name" class="input" onkeydown="enterKey()"> </div>
-      <div class="item"> 카테고리:
-        <select id="kategorie1" class="input">
-          <option>카테고리 없음</option>
-        </select>
+      <div class="item">
+        제품명: <input type="text" id="name" class="input" onkeydown="enterKey()">
       </div>
-      <div class="item"> 제품분류: <input type="text" id="kategorie2" class="input" onkeydown="enterKey()"> </div>
+      <div class="item">
+        카테고리:
+        <select id="kategorie1" class="input"> <option> 카테고리 없음 </option> </select>
+      </div>
+      <div class="item">
+        제품분류: <input type="text" id="kategorie2" class="input" onkeydown="enterKey()">
+      </div>
       <div> <button onclick="input()">등록</button> </div>
+    </div>
 
       <!-- <hr/>
       <form name="form">
@@ -28,8 +34,8 @@
       </form> -->
       <hr/>
 
-      <!-- 등록된 제품 -->
-      <div id="test2"></div>
+      <!-- 등록된 제품 정보를 출력되는 위치 -->
+      <div id="output"></div>
     </article>
   </body>
 </html>

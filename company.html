@@ -9,28 +9,37 @@
 </head>
 <body>
     <article>
-<<<<<<< HEAD
-    <div class="item"> 가게명: <input type="text" id="item1" class="input"> </div>
-    <div class="item"> 가게분류:
-    <select id="item2" class="input">
-        <option>카테고리 없음</option>
-    </select>
-    </div>
-    <div class="item"> 주소: <input type="text" id="item3" class="input" style="width: 60%" readonly> <button onclick="window.open('find_address.html', 'Find','width=600, height=400')">주소찾기</button> </div>
-    <div class="item"> 상세주소: <input type="text" id="item4" class="input" style="width: 60%"> </div>
-    <div> <button onclick="find()">저장</button> </div>
-=======
-    <div class="item"> 가게명: <input type="text" id="item0" class="input"> </div>
-    <div class="item"> 가게분류:
-    <select id="item1" class="input">
-        <option>카테고리 없음</option>
-    </select>
-    </div>
-    <div class="item"> 주소: <input type="text" id="item2" class="input" style="width: 60%" readonly> <button onclick="openFindAddress()">주소찾기</button> </div>
-    <div class="item"> 상세주소: <input type="text" id="item3" class="input" style="width: 60%"> </div>
-    <div> <button onclick="input()">저장</button> </div>
->>>>>>> 946b00ea8376d3c19f89c57b0433a497ad5c0c46
-    <div></div>
+
+        <!--가게 정보를 입력-->
+        <div>
+            <div class="item">
+                가게명: <input type="text" id="item0" class="input">
+            </div>
+            
+            <div class="item">
+                가게분류:
+                <select id="item1" class="input">
+                    <option>카테고리 없음</option>
+                </select>
+            </div>
+
+            <!--선택한 주소를 받아옴-->
+            <div>
+                <form name="form" id="form" method="post">
+                    <div class="item">
+                        주소: <input type="text" id="item2" class="input" style="width: 60%" readonly>
+                    </div>
+                </form>
+                <button onclick="openFindAddress()">주소찾기</button>
+            </div>
+
+            <div class="item">
+                상세주소: <input type="text" id="item3" class="input" style="width: 60%">
+            </div>
+        </div>
+
+        <!--입력한 가게 정보를 저장-->
+        <div> <button onclick="input()">저장</button> </div>
     </article>
 </body>
 </html>
