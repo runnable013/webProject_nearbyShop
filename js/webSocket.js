@@ -2,12 +2,14 @@
 var wsUri = "ws://127.0.0.1:8080/";
 var output;
 
-function init(){
+function init()
+{
     output = document.getElementById("output");
     testWebSocket();
 }
 
-function testWebSocket() {
+function testWebSocket()
+{
     webSocket = new WebSocket(wsUri);
     webSocket.onopen = function(evt){ onOpen(evt); };
     webSocket.onclose = function(evt){ onClose(evt); };
@@ -15,30 +17,36 @@ function testWebSocket() {
     webSocket.onerror = function(evt){ onError(evt); };
 }
 
-function onOpen(evt) {
+function onOpen(evt)
+{
     writeToscreen("연결완료");
     doSend("!!!!!!!!!!!!!!");
 }
 
-function onClose(evt) {
+function onClose(evt)
+{
     writeToscreen("연결해제");
 }
 
-function onMessage(evt) {
+function onMessage(evt)
+{
     writeToscreen('<span style="color:blue;">수신: '+evt.data+'</span>');
     webSocket.close();
 }
 
-function onError(evt){
+function onError(evt)
+{
     writeToscreen('<span style="color:blue;">에러</span>'+evt.data);
 }
 
-function doSend(message){
+function doSend(message)
+{
     writeToscreen("발신: "+message);
     webSocket.send(message);
 }
 
-function writeToscreen(message){
+function writeToscreen(message)
+{
     var pre = document.createElement("P");
     pre.style.wordWrap = "break-word";
     pre.innerHTML = message;
