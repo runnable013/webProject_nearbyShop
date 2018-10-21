@@ -4,6 +4,7 @@ var output;
 
 function init()
 {
+    console.log("load"); 
     output = document.getElementById("output");
     testWebSocket();
 }
@@ -17,32 +18,18 @@ function testWebSocket()
     webSocket.onerror = function(evt){ onError(evt); };
 }
 
+var search = "str=";
+
 function onOpen(evt)
 {
-    writeToscreen("연결완료");
-    doSend("!!!!!!!!!!!!!!");
-}
-
-function onClose(evt)
-{
-    writeToscreen("연결해제");
+    doSend(search);
 }
 
 function onMessage(evt)
 {
-    writeToscreen('<span style="color:blue;">수신: '+evt.data+'</span>');
-    webSocket.close();
-}
-
-function onError(evt)
-{
-    writeToscreen('<span style="color:blue;">에러</span>'+evt.data);
-}
-
-function doSend(message)
-{
-    writeToscreen("발신: "+message);
-    webSocket.send(message);
+    writeToscreen('<span style="border:1px;">'+evt.data+'</span>');   
+    
+    //webSocket.close();
 }
 
 function writeToscreen(message)
@@ -51,6 +38,21 @@ function writeToscreen(message)
     pre.style.wordWrap = "break-word";
     pre.innerHTML = message;
     output.appendChild(pre);
+}
+
+function doSend(message)
+{
+    webSocket.send(message);
+}
+
+function onClose(evt)
+{
+    writeToscreen("연결해제");
+}
+
+function onError(evt)
+{
+    writeToscreen('<span style="color:blue;">에러</span>'+evt.data);
 }
 
 window.addEventListener("load", init, false);
