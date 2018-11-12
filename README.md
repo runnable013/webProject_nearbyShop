@@ -1,6 +1,7 @@
 # webProject_nearbyShop
 
 임시 저장 저장소 -> 이 저장소는 더 이상 활동 안함
+
 nearbyShop 저장소로 변경 -> nearbyShop 페이지를 참고
 
 
